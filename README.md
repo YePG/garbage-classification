@@ -6,6 +6,7 @@
 
 #### 第一步 数据准备
 数据下载地址为：https://pan.baidu.com/s/1ZO2Nn1cveyMxjcPmLNNzow  提取码：47d1
+
 这个是一个40个类的垃圾图片集合。下载后解压。对应类别如下：
     "0": "其他垃圾/一次性快餐盒",
     "1": "其他垃圾/污损塑料",
@@ -49,10 +50,18 @@
     "39": "有害垃圾/过期药物"
 
 #### 第二步 重新训练
+git一下训练模型代码和Android相关代码
+git clone https://github.com/googlecodelabs/tensorflow-for-poets-2
 
-1.  考虑到测试手机性能还不赖，我们选择mobilenet_v1_1.0_224这个版本作为我们的预编译模型。
+cd tensorflow-for-poets-2
+然后我们只需要关注 scripts文件夹和Android文件夹和tflite文件夹
+scripts是关于重新训练的代码
+tflite存放模型文件和数据集
+Android用来存放Android相关的代码
 
-2.  scripts目录下的retrain.py是我们需要关注的，这个代码目前仅支持Inception_v3和Mobilenet两种预编译模型，默认的训练模型为Inception_v3。我们使用的是Mobilenet模型
+1. 考虑到测试手机性能还不赖，我们选择mobilenet_v1_1.0_224这个版本作为我们的预编译模型。
+
+2. scripts目录下的retrain.py是我们需要关注的，这个代码目前仅支持Inception_v3和Mobilenet两种预编译模型，默认的训练模型为Inception_v3。我们使用的是Mobilenet模型
 
 3.  重新训练模型命令
 python -m scripts.retrain \　--learning_rate=0.01 \ 　
