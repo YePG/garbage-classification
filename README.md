@@ -51,6 +51,7 @@
 
 #### 第二步 重新训练
 git一下训练模型代码和Android相关代码
+本来想上传的 但是好像有点多而且挺麻烦 我就不上传了
 git clone https://github.com/googlecodelabs/tensorflow-for-poets-2
 
 cd tensorflow-for-poets-2
